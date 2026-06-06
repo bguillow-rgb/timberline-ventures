@@ -1,0 +1,23 @@
+---
+import { SITE } from '../../consts';
+
+interface Props {
+  // Ordered crumbs after Home, e.g. [{ name: 'About', path: '/about' }].
+  crumbs: { name: string; path: string }[];
+}
+const { crumbs } = Astro.props;
+
+const items = [{ name: 'Home', path: '' }, ...crumbs].map((c, i) => ({
+  '@type': 'ListItem',
+  position: i + 1,
+  name: c.name,
+  item: `${SITE.url}${c.path}`,
+}));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items,
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -1,0 +1,33 @@
+---
+import { SITE, PORTFOLIO } from '../../consts';
+
+// Organization schema = the entity anchor for the whole portfolio. The
+// `subOrganization` + `owns` arrays are generated from PORTFOLIO so the
+// entity graph stays in sync with what the site actually shows. This is how
+// AI engines and Google confirm Timberline Ventures owns the named brands.
+const brands = PORTFOLIO.map((p) => ({
+  '@type': 'Organization',
+  name: p.name,
+  url: p.url,
+}));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  alternateName: SITE.shortName,
+  url: SITE.url,
+  logo: `${SITE.url}/icon-512.png`,
+  email: SITE.contactEmail,
+  foundingDate: SITE.foundedYear,
+  description: SITE.description,
+  sameAs: SITE.founder.sameAs.filter(Boolean),
+  founder: {
+    '@type': 'Person',
+    name: SITE.founder.name,
+  },
+  subOrganization: brands,
+  owns: brands,
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

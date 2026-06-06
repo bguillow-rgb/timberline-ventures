@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FAQPageSchema from '../components/schema/FAQPageSchema.astro';
+import { SITE, PORTFOLIO, PORTFOLIO_GROUPS } from '../consts';
+
+const faqs = [
+  { q: 'What is Timberline Ventures LLC?', a: 'Timberline Ventures LLC is an independent digital product studio that builds and operates a portfolio of consumer iOS apps and high-trust information websites, including three bilingual ITIN financial guidance sites and three native iOS collector apps.' },
+  { q: 'Who operates the ITIN information sites?', a: 'The three ITIN sites\u2014itinlending.net, itincreditcard.com, and itincreditscore.com\u2014are owned and operated by Timberline Ventures LLC. They publish independent, bilingual (English and Spanish) guides for ITIN holders in the U.S. Timberline is not a lender or broker.' },
+  { q: 'What apps does Timberline Ventures publish?', a: 'Timberline publishes Pour Picks (bourbon and whiskey cellar for iOS), Stick Picks (cigar collection journal for iOS), and Perfume Picks (fragrance wardrobe for iOS).' },
+  { q: 'How can I contact Timberline Ventures?', a: `You can reach the studio at ${SITE.contactEmail}. For support on a specific product, see that product\u2019s support page.` },
+  { q: 'Is Timberline Ventures a lender or financial advisor?', a: 'No. The ITIN information sites are independent editorial publishers\u2014not lenders, brokers, or financial advisors. All content is for informational purposes only.' },
+];
+
+const grouped = PORTFOLIO_GROUPS.map((g) => ({
+  label: g,
+  brands: PORTFOLIO.filter((b) => b.group === g),
+}));
+---
+<BaseLayout
+  title={SITE.shortName}
+  description={SITE.description}
+  path=""
+>
+  <slot name="head" slot="head">
+    <FAQPageSchema faqs={faqs} />
+  </slot>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Digital Product Studio</span>
+      <h1>Building products that <em>earn trust</em></h1>
+      <p class="hero-sub">
+        Timberline Ventures is an independent studio operating a portfolio of high-quality iOS apps and bilingual financial information sites.
+      </p>
+      <div class="cta-row">
+        <a href="/#portfolio" class="btn btn-primary">View portfolio</a>
+        <a href="/about" class="btn btn-ghost">About the studio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT STRIP -->
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat">
+        <div class="num">6</div>
+        <div class="label">Active properties</div>
+      </div>
+      <div class="stat">
+        <div class="num">3</div>
+        <div class="label">Languages served (EN + ES)</div>
+      </div>
+      <div class="stat">
+        <div class="num">3</div>
+        <div class="label">iOS apps published</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Portfolio</p>
+        <h2>Products &amp; properties</h2>
+        <p>Each property is built for a specific audience with a clear value proposition, original content, and sustained editorial care.</p>
+      </div>
+
+      {grouped.map((group) => (
+        <div class="group">
+          <p class="group-label">{group.label}</p>
+          <div class="card-grid">
+            {group.brands.map((brand) => (
+              <a class="card" href={brand.url} target="_blank" rel="noopener">
+                <span class="badge">{brand.initials}</span>
+                <h3>{brand.name}</h3>
+                <p>{brand.blurb}</p>
+                <span class="visit">Visit site</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- VALUES / APPROACH -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">How we work</p>
+        <h2>The Timberline approach</h2>
+        <p>Small studio, high standards. We pick niches we can serve well and stay in them for years.</p>
+      </div>
+      <div class="value-grid">
+        <div class="value">
+          <h3><span class="ico">&#9650;</span>Quality over quantity</h3>
+          <p>We publish fewer pages and build fewer features than we could\u2014but every piece earns its place. Depth beats breadth in both search and App Store rankings.</p>
+        </div>
+        <div class="value">
+          <h3><span class="ico">&#9670;</span>Trust as product</h3>
+          <p>Our finance sites are in the YMYL category where trust is non-negotiable. E-E-A-T signals, accurate citations, advertiser disclosure, and bilingual access are baked in from day one.</p>
+        </div>
+        <div class="value">
+          <h3><span class="ico">&#9679;</span>Independent &amp; bootstrapped</h3>
+          <p>No outside investors, no agenda beyond serving users well. That independence lets us say things exactly as they are and iterate on what users actually need.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Interested in working together?</h2>
+      <p>Partnership, licensing, content collaboration, or just a question\u2014reach out directly.</p>
+      <a href="/contact" class="btn btn-primary">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">FAQ</p>
+        <h2>Common questions</h2>
+      </div>
+      <div style="max-width:740px;margin:0 auto;">
+        {faqs.map((f) => (
+          <div class="faq-item">
+            <p class="faq-q">{f.q}</p>
+            <p class="faq-a">{f.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

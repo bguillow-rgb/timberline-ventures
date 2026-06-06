@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { SITE } from '../consts';
+
+const effective = '2026-06-06';
+---
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy Policy for timberlineventuresllc.com and Timberline Ventures LLC."
+  path="/privacy"
+>
+  <slot name="head" slot="head">
+    <BreadcrumbSchema crumbs={[{ name: 'Privacy Policy', path: '/privacy' }]} />
+  </slot>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Privacy Policy</h1>
+      <p>How Timberline Ventures LLC collects, uses, and protects your information on this corporate site.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p class="effective">Effective date: {effective}</p>
+
+    <h2>Who we are</h2>
+    <p>
+      Timberline Ventures LLC (&ldquo;Timberline,&rdquo; &ldquo;we,&rdquo; or &ldquo;us&rdquo;) operates this corporate website at <strong>timberlineventuresllc.com</strong>. This Privacy Policy covers only this site. Our individual products (ITIN sites, iOS apps) each have their own separate privacy policies.
+    </p>
+
+    <h2>What we collect</h2>
+    <p>This is a static informational site. We do not run forms that collect personal data. We may collect:</p>
+    <ul>
+      <li><strong>Analytics data</strong> (via Google Analytics 4, if enabled) &mdash; page views, session duration, browser/device type, approximate geographic location, and referrer. IP addresses are anonymized.</li>
+      <li><strong>Email correspondence</strong> &mdash; if you email us at our contact address, we receive your email address and message content. We use this only to respond to your inquiry.</li>
+    </ul>
+
+    <h2>How we use it</h2>
+    <p>We use analytics data solely to understand how the site is used and to improve it. We do not sell, rent, or share personal data with third parties for marketing purposes.</p>
+
+    <h2>Cookies</h2>
+    <p>Google Analytics 4 uses cookies to distinguish visitors. You can opt out by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics opt-out browser add-on</a>, or by using a browser extension that blocks tracking scripts.</p>
+
+    <h2>Third-party services</h2>
+    <ul>
+      <li><strong>Google Analytics 4</strong> &mdash; analytics. Subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&rsquo;s Privacy Policy</a>.</li>
+      <li><strong>GitHub Pages</strong> &mdash; site hosting. GitHub may log your IP address per their privacy policy.</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>Analytics data is retained for 14 months (the GA4 default). Email correspondence is retained only as long as it is useful to us for responding to your inquiry.</p>
+
+    <h2>Your rights</h2>
+    <p>If you are a resident of the EU, UK, California, or another jurisdiction with privacy rights, you may have the right to access, correct, or delete personal data we hold about you. Contact us at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> to exercise those rights.</p>
+
+    <h2>Children</h2>
+    <p>This site is not directed at children under 13 and we do not knowingly collect personal data from children.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy occasionally. The effective date above will be updated when we do. Material changes will be noted prominently.</p>
+
+    <h2>Contact</h2>
+    <p>Privacy questions: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></p>
+  </div>
+</BaseLayout>

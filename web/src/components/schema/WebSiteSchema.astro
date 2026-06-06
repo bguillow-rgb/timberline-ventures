@@ -1,0 +1,18 @@
+---
+import { SITE } from '../../consts';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.shortName,
+  url: SITE.url,
+  description: SITE.description,
+  inLanguage: SITE.locale,
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.url,
+  },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

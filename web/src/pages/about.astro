@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PersonSchema from '../components/schema/PersonSchema.astro';
+import AboutPageSchema from '../components/schema/AboutPageSchema.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { SITE, PORTFOLIO, PORTFOLIO_GROUPS } from '../consts';
+
+const grouped = PORTFOLIO_GROUPS.map((g) => ({
+  label: g,
+  brands: PORTFOLIO.filter((b) => b.group === g),
+}));
+---
+<BaseLayout
+  title="About"
+  description={`About Timberline Ventures LLC \u2014 an independent digital product studio founded by ${SITE.founder.name} building iOS apps and ITIN financial information sites.`}
+  path="/about"
+>
+  <slot name="head" slot="head">
+    <PersonSchema />
+    <AboutPageSchema />
+    <BreadcrumbSchema crumbs={[{ name: 'About', path: '/about' }]} />
+  </slot>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>About Timberline Ventures</h1>
+      <p>An independent digital product studio building useful, trustworthy products for underserved audiences.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h2>What we do</h2>
+    <p>
+      Timberline Ventures LLC is a bootstrapped studio that designs, builds, and operates a small portfolio of digital products\u2014native iOS collector apps and bilingual ITIN financial information sites. We focus on niches where good, honest information and well-crafted software are genuinely scarce.
+    </p>
+    <p>
+      Every property we operate is built for a specific audience, maintained with editorial care, and monetized in ways that align with what users actually need\u2014never at their expense.
+    </p>
+
+    <h2>The studio</h2>
+    <p>
+      Founded by <strong>{SITE.founder.name}</strong> in {SITE.foundedYear}, Timberline Ventures is intentionally small. We move carefully, publish when things are ready, and take the long view on both search authority and product quality. No investors, no shortcuts.
+    </p>
+    <p>
+      We are headquartered in the United States and operate fully remotely.
+    </p>
+
+    <h2>Our portfolio</h2>
+
+    {grouped.map((group) => (
+      <div style="margin-bottom: 32px;">
+        <h3>{group.label}</h3>
+        <ul>
+          {group.brands.map((brand) => (
+            <li>
+              <strong><a href={brand.url} target="_blank" rel="noopener">{brand.name}</a></strong>
+              {' \u2014 '}{brand.blurb}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+
+    <h2>Editorial independence</h2>
+    <p>
+      The ITIN information sites are <strong>independent publishers</strong>\u2014not lenders, mortgage brokers, financial advisors, or credit repair companies. Where we recommend third-party products, we disclose affiliate relationships clearly on each page. Our editorial positions are not for sale.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For business inquiries, partnership proposals, or press contact, email us at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+    </p>
+  </div>
+</BaseLayout>

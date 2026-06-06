@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { SITE } from '../consts';
+
+const effective = '2026-06-06';
+---
+<BaseLayout
+  title="Terms of Use"
+  description="Terms of Use for timberlineventuresllc.com, operated by Timberline Ventures LLC."
+  path="/terms"
+>
+  <slot name="head" slot="head">
+    <BreadcrumbSchema crumbs={[{ name: 'Terms of Use', path: '/terms' }]} />
+  </slot>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Terms of Use</h1>
+      <p>The rules and conditions for using this corporate website.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p class="effective">Effective date: {effective}</p>
+
+    <h2>Acceptance</h2>
+    <p>By accessing timberlineventuresllc.com you agree to these Terms. If you do not agree, please do not use the site.</p>
+
+    <h2>About this site</h2>
+    <p>
+      This is the corporate website of <strong>Timberline Ventures LLC</strong>, an independent digital product studio. It is an informational site only. Nothing on it constitutes financial, legal, investment, or professional advice of any kind.
+    </p>
+
+    <h2>Intellectual property</h2>
+    <p>All content on this site&mdash;including text, design, graphics, and code&mdash;is owned by or licensed to Timberline Ventures LLC. You may not reproduce, distribute, or create derivative works without prior written permission.</p>
+
+    <h2>Links to third-party sites</h2>
+    <p>This site links to our portfolio properties and other third-party sites. We are not responsible for the content, privacy practices, or terms of those sites. A link does not imply endorsement beyond what is stated.</p>
+
+    <h2>Disclaimer of warranties</h2>
+    <p>This site is provided &ldquo;as is&rdquo; without warranties of any kind, express or implied. We do not guarantee the accuracy, completeness, or timeliness of the information presented.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the maximum extent permitted by law, Timberline Ventures LLC shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of or inability to use this site.</p>
+
+    <h2>Governing law</h2>
+    <p>These Terms are governed by the laws of the United States applicable to contracts formed and performed here, without regard to conflict-of-law provisions.</p>
+
+    <h2>Changes</h2>
+    <p>We may update these Terms from time to time. The effective date above will reflect the latest revision. Continued use of the site after changes constitutes acceptance.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these Terms: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></p>
+  </div>
+</BaseLayout>

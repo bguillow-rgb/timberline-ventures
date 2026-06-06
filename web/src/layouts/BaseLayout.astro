@@ -1,0 +1,90 @@
+---
+import { SITE, NAV, FOOTER_LINKS } from '../consts';
+import OrganizationSchema from '../components/schema/OrganizationSchema.astro';
+import WebSiteSchema from '../components/schema/WebSiteSchema.astro';
+import Analytics from '../components/Analytics.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  path?: string; // canonical path on this site, e.g. '/about'
+  noindex?: boolean;
+  suppressGlobalSchema?: boolean;
+}
+
+const {
+  title,
+  description = SITE.description,
+  path = '',
+  noindex = false,
+  suppressGlobalSchema = false,
+} = Astro.props;
+
+const canonical = `${SITE.url}${path}`;
+const fullTitle =
+  title === SITE.name || title === SITE.shortName
+    ? `${SITE.shortName} \u2014 ${SITE.tagline}`
+    : `${title} \u2014 ${SITE.shortName}`;
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang={SITE.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={SITE.shortName} />
+    <meta property="og:image" content={`${SITE.url}/assets/hero-forest.jpg`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${SITE.url}/assets/hero-forest.jpg`} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content={SITE.theme.bg} />
+
+    {!suppressGlobalSchema && <OrganizationSchema />}
+    {!suppressGlobalSchema && <WebSiteSchema />}
+
+    <Analytics />
+    <slot name="head" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="/" aria-label={`${SITE.shortName} home`}>
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 L4 21 H20 Z" /><path d="M12 3 L8.5 12 L12 10 L15.5 12 Z" /></svg>
+          </span>
+          <span><b>Timberline</b> Ventures</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span class="f-brand">{SITE.name}</span>
+        <div class="f-links">
+          {FOOTER_LINKS.map((item) => <a href={item.href}>{item.label}</a>)}
+        </div>
+        <p class="f-legal">&copy; {year} {SITE.name}. An independent digital product studio. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
