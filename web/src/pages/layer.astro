@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { SITE } from '../consts';
+---
+<BaseLayout
+  title="Layer \u2014 Skincare Routine App"
+  description="Layer is an upcoming iOS app for skincare\u2014organize your shelf, build your AM/PM routine, track what works, and discover your next product. A Timberline Ventures product, coming soon."
+  path="/layer"
+>
+  <slot name="head" slot="head">
+    <BreadcrumbSchema crumbs={[{ name: 'Layer', path: '/layer' }]} />
+  </slot>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Coming Soon \u00b7 Consumer Apps</span>
+      <h1>Layer \u2014 your <em>skincare</em> shelf</h1>
+      <p class="hero-sub">
+        A native iOS app for skincare: organize the products on your shelf, build and layer your AM/PM routine, track what is actually working for your skin, and discover what to add next. Built and operated by Timberline Ventures LLC.
+      </p>
+      <div class="cta-row">
+        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="/#portfolio" class="btn btn-ghost">See the portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="prose">
+    <h2>What Layer is</h2>
+    <p>Layer helps people make sense of their skincare. Catalog the products you own, build a step-by-step routine that respects correct layering order, log how your skin responds over time, and get a clear picture of what to keep, cut, or try next\u2014then link out to buy the products you want.</p>
+
+    <h2>For partners &amp; advertisers</h2>
+    <p>Layer reaches an engaged audience of skincare buyers\u2014people actively researching and purchasing cleansers, serums, moisturizers, SPF, and tools. For beauty and skincare brands interested in partnering or affiliate placement, reach the studio at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
+
+    <h2>Launching soon</h2>
+    <p>Layer is in active development. Check back for the launch, or <a href="/contact">contact us</a> to be notified when it goes live.</p>
+  </div>
+</BaseLayout>
