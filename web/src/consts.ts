@@ -95,6 +95,22 @@ export const PORTFOLIO = [
       'A fragrance wardrobe for iOS \u2014 organize your collection, log wears and discover what to reach for next.',
     initials: 'FP',
   },
+  {
+    name: 'Percolate',
+    url: 'https://percolateapp.com',
+    group: 'Consumer apps',
+    blurb:
+      'A specialty-coffee shelf for iOS \u2014 build your coffee shelf, log structured cupping notes, and find your next bag.',
+    initials: 'PC',
+  },
+  {
+    name: 'Underdial',
+    url: 'https://underdial.com',
+    group: 'Consumer apps',
+    blurb:
+      'Watch discovery and an honest advisor for iOS \u2014 find your next affordable premium watch under $1,000.',
+    initials: 'UD',
+  },
 ];
 
 export const PORTFOLIO_GROUPS = ['Financial information', 'Consumer apps'];
