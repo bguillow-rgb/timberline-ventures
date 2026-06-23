@@ -4,3 +4,7 @@ dist/
 web/.env
 .claude/
 research/
+
+# Private platform — lives in its own private repo, NEVER in this public marketing repo
+dna-layer/
+planning/
