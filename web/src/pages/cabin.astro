@@ -1,0 +1,430 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { SITE } from '../consts';
+---
+<BaseLayout
+  title="Cabin — Private Jet Charter App"
+  description="Cabin is an upcoming iOS app for private aviation. It learns how you like to fly, then points you to the few charters worth your time. A Timberline Ventures product, coming soon to the App Store."
+  path="/cabin"
+>
+  <slot name="head" slot="head">
+    <BreadcrumbSchema crumbs={[{ name: 'Cabin', path: '/cabin' }]} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap"
+    />
+  </slot>
+
+  <!-- HERO: dawn at altitude -->
+  <section class="cb-hero">
+    <div class="cb-sky" aria-hidden="true"></div>
+    <div class="cb-horizon" aria-hidden="true"></div>
+    <div class="cb-hero-inner">
+      <div class="cb-hero-copy">
+        <span class="cb-marker">
+          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true" fill="currentColor"><path d="M11.18 8.6c-.02-1.5 1.22-2.22 1.28-2.26-.7-1.02-1.79-1.16-2.17-1.18-.92-.09-1.8.54-2.27.54-.47 0-1.19-.53-1.96-.51-1.01.01-1.94.59-2.46 1.49-1.05 1.82-.27 4.5.75 5.98.5.72 1.1 1.53 1.88 1.5.76-.03 1.04-.49 1.96-.49.91 0 1.17.49 1.96.47.81-.01 1.32-.73 1.81-1.46.57-.83.81-1.64.82-1.68-.02-.01-1.56-.6-1.58-2.38zM9.7 4.18c.41-.5.69-1.2.61-1.9-.59.03-1.31.39-1.74.89-.38.44-.72 1.15-.63 1.83.66.05 1.34-.33 1.76-.82z"/></svg>
+          Coming to the App Store
+        </span>
+
+        <h1 class="cb-wordmark">Cabin</h1>
+
+        <p class="cb-lede">
+          Know which jet to book before you ever ask for a price.
+        </p>
+
+        <p class="cb-sub">
+          Cabin learns how you like to fly. The cabin you want, the range you need,
+          the operators you trust. Then it points you to the handful of charters that
+          fit. You say where you are going. It already knows the rest.
+        </p>
+
+        <a class="cb-cta" href="/contact">
+          Request early access
+          <span class="cb-arrow" aria-hidden="true">&#8594;</span>
+        </a>
+      </div>
+
+      <figure class="cb-jet" aria-hidden="true">
+        <svg class="cb-jet-svg" viewBox="0 0 720 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cb-jet-trail" d="M28 116 C 220 146, 440 168, 700 180" />
+          <g class="cb-jet-body">
+            <path d="M694 176 C 648 158 612 152 556 150 L 250 138 C 196 136 150 134 120 128 C 150 156 206 174 306 182 C 432 190 556 192 600 188 C 644 184 672 182 694 176 Z" />
+            <path d="M150 132 L 70 54 C 66 48 73 45 79 50 L 172 124" />
+            <path d="M82 58 L 34 44 C 30 43 30 50 35 52 L 90 70" />
+            <path d="M372 184 L 250 258 C 245 262 251 267 258 264 L 444 192" />
+            <path d="M196 148 C 196 140 236 138 248 142 C 256 145 256 156 248 159 C 232 164 196 160 196 148 Z" />
+            <path d="M612 158 C 628 156 650 158 668 164" />
+          </g>
+          <g class="cb-jet-windows">
+            <circle cx="330" cy="157" r="3.2" />
+            <circle cx="368" cy="158" r="3.2" />
+            <circle cx="406" cy="159" r="3.2" />
+            <circle cx="444" cy="160" r="3.2" />
+            <circle cx="482" cy="160" r="3.2" />
+            <circle cx="520" cy="160" r="3.2" />
+            <circle cx="558" cy="159" r="3.2" />
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SIGNAGE STRIP -->
+  <div class="cb-strip" role="presentation">
+    <span>Private aviation</span>
+    <span class="cb-dot">&middot;</span>
+    <span>Operator-neutral by design</span>
+    <span class="cb-dot">&middot;</span>
+    <span>No membership, no quote chase</span>
+    <span class="cb-dot">&middot;</span>
+    <span>A Timberline Ventures app</span>
+  </div>
+
+  <!-- STATEMENT -->
+  <section class="cb-statement">
+    <div class="cb-statement-grid">
+      <p class="cb-side-label">The idea</p>
+      <div class="cb-statement-body">
+        <p class="cb-big">
+          Most charter apps hand you a search box and ten thousand tail numbers.
+        </p>
+        <p class="cb-big cb-em">
+          Cabin starts with you, then shows the short list.
+        </p>
+        <p class="cb-para">
+          No membership to join. No quote to chase before you know what you want.
+          Tell Cabin the trip and it returns a small, considered set of aircraft
+          and operators that suit how you fly, with a clean path to book the one
+          you choose.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DNA / TASTE ENGINE -->
+  <section class="cb-dna">
+    <div class="cb-dna-inner">
+      <p class="cb-side-label cb-side-light">Why it gets you</p>
+      <h2 class="cb-dna-head">It already knows what you like.</h2>
+      <p class="cb-para cb-para-light">
+        Cabin runs on the taste engine behind the rest of our apps. It learns your
+        pattern: the classic cabins over the new ones, the operators with the safety
+        record you want, the short hop to the coast more than the long haul. Every
+        trip you take makes the next short list shorter and surer.
+      </p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="cb-close">
+    <div class="cb-close-inner">
+      <p class="cb-close-line">Cabin is in early build.</p>
+      <p class="cb-close-sub">
+        Leave your name and we will tell you the day it lands on the App Store.
+      </p>
+      <a class="cb-cta cb-cta-dark" href={`mailto:${SITE.contactEmail}`}>
+        Get on the list
+        <span class="cb-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <p class="cb-studio">A Timberline Ventures product.</p>
+    </div>
+  </section>
+
+  <style>
+    /* ---- Cabin's own world: deep blue-black ink + champagne + altitude light.
+       Scoped local tokens so this page reads as its own brand between the
+       shared Timberline header and footer. ---- */
+    .cb-hero, .cb-strip, .cb-statement, .cb-dna, .cb-close {
+      --ink: #080C14;
+      --ink-2: #0C1320;
+      --bone: #ECE6D7;
+      --bone-soft: #B9B6AC;
+      --brass: #C9A86A;
+      --brass-soft: #E3CB97;
+      --altitude: #5E7C95;
+      --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    }
+
+    /* ---------- HERO ---------- */
+    .cb-hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--ink);
+      padding: clamp(120px, 18vh, 200px) 0 clamp(90px, 12vh, 150px);
+      isolation: isolate;
+    }
+    /* dawn light, weighted to the upper right — intentional asymmetry */
+    .cb-sky {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(120% 90% at 82% 6%, rgba(201,168,106,0.20) 0%, rgba(201,168,106,0.05) 28%, rgba(8,12,20,0) 58%),
+        radial-gradient(90% 70% at 88% 0%, rgba(227,203,151,0.14) 0%, rgba(8,12,20,0) 46%),
+        linear-gradient(180deg, #0B1322 0%, #080C14 64%, #070A11 100%);
+    }
+    /* the horizon: one luminous hairline low in the frame */
+    .cb-horizon {
+      position: absolute;
+      left: 0; right: 0;
+      bottom: clamp(56px, 10vh, 120px);
+      height: 1px;
+      z-index: -1;
+      background: linear-gradient(90deg,
+        rgba(94,124,149,0) 0%,
+        rgba(94,124,149,0.35) 22%,
+        rgba(227,203,151,0.65) 60%,
+        rgba(227,203,151,0.15) 92%,
+        rgba(94,124,149,0) 100%);
+    }
+    .cb-horizon::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; top: 1px;
+      height: 70px;
+      background: linear-gradient(180deg, rgba(201,168,106,0.10), rgba(8,12,20,0));
+      filter: blur(2px);
+    }
+    .cb-hero-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      align-items: center;
+      column-gap: clamp(20px, 4vw, 64px);
+    }
+    .cb-hero-copy { max-width: 600px; }
+    /* the jet sits high and bleeds off the right edge — the asymmetry is the point */
+    .cb-jet {
+      margin: 0;
+      align-self: start;
+      margin-top: clamp(28px, 6vh, 72px);
+      margin-right: clamp(-72px, -6vw, -20px);
+    }
+    .cb-jet-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+      transform: rotate(-5deg);
+      transform-origin: 70% 50%;
+    }
+    .cb-jet-body path {
+      stroke: var(--brass-soft);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .cb-jet-windows circle { fill: rgba(227, 203, 151, 0.5); }
+    .cb-jet-trail {
+      stroke: rgba(94, 124, 149, 0.55);
+      stroke-width: 1;
+      stroke-dasharray: 1.5 7;
+      fill: none;
+    }
+    .cb-marker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+      color: var(--brass-soft);
+      border: 1px solid rgba(201,168,106,0.32);
+      border-radius: 2px;
+      padding: 8px 14px;
+      margin-bottom: 40px;
+    }
+    .cb-marker svg { opacity: 0.9; }
+    .cb-wordmark {
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-size: clamp(76px, 16vw, 188px);
+      line-height: 0.86;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.28em;
+      color: var(--bone);
+    }
+    .cb-lede {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(23px, 3.4vw, 38px);
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+      color: var(--bone);
+      max-width: 18ch;
+      margin: 0 0 28px;
+    }
+    .cb-sub {
+      font-size: clamp(16px, 1.4vw, 18px);
+      line-height: 1.7;
+      color: var(--bone-soft);
+      max-width: 46ch;
+      margin: 0 0 40px;
+    }
+    .cb-cta {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--brass-soft);
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(201,168,106,0.4);
+    }
+    .cb-cta:hover { color: #fff; border-color: var(--brass-soft); }
+    .cb-arrow { transition: transform 0.22s ease; }
+    .cb-cta:hover .cb-arrow { transform: translateX(5px); }
+
+    /* ---------- SIGNAGE STRIP ---------- */
+    .cb-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+      background: var(--ink-2);
+      border-top: 1px solid rgba(201,168,106,0.14);
+      border-bottom: 1px solid rgba(201,168,106,0.14);
+      padding: 18px 24px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--bone-soft);
+    }
+    .cb-strip .cb-dot { color: var(--brass); opacity: 0.7; }
+
+    /* ---------- STATEMENT ---------- */
+    .cb-statement {
+      background: var(--ink);
+      padding: clamp(80px, 13vh, 150px) 0;
+    }
+    .cb-statement-grid {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 28px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 40px;
+    }
+    .cb-side-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin: 10px 0 0;
+      padding-top: 6px;
+      border-top: 1px solid rgba(201,168,106,0.3);
+      align-self: start;
+    }
+    .cb-statement-body { max-width: 30ch; }
+    .cb-big {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(26px, 3.6vw, 44px);
+      line-height: 1.16;
+      letter-spacing: -0.01em;
+      color: var(--bone);
+      margin: 0 0 0.5em;
+      max-width: 22ch;
+    }
+    .cb-em { color: var(--brass-soft); font-weight: 400; }
+    .cb-para {
+      font-size: clamp(15px, 1.3vw, 17px);
+      line-height: 1.75;
+      color: var(--bone-soft);
+      max-width: 52ch;
+      margin: 28px 0 0;
+    }
+
+    /* ---------- DNA / TASTE ENGINE ---------- */
+    .cb-dna {
+      background:
+        radial-gradient(80% 120% at 12% 0%, rgba(94,124,149,0.10), rgba(8,12,20,0) 55%),
+        var(--ink-2);
+      border-top: 1px solid rgba(201,168,106,0.12);
+      padding: clamp(80px, 13vh, 150px) 0;
+    }
+    .cb-dna-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .cb-side-light { color: var(--altitude); border-top-color: rgba(94,124,149,0.4); display: inline-block; }
+    .cb-dna-head {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(32px, 5.2vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--bone);
+      margin: 22px 0 0;
+      max-width: 16ch;
+    }
+    .cb-para-light { margin-top: 30px; max-width: 50ch; }
+
+    /* ---------- CLOSING ---------- */
+    .cb-close {
+      background: var(--ink);
+      padding: clamp(90px, 15vh, 170px) 0;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,106,0.12);
+    }
+    .cb-close-inner { max-width: 560px; margin: 0 auto; padding: 0 28px; }
+    .cb-close-line {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(28px, 4.4vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--bone);
+      margin: 0 0 16px;
+    }
+    .cb-close-sub {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--bone-soft);
+      max-width: 38ch;
+      margin: 0 auto 34px;
+    }
+    .cb-cta-dark { margin: 0 auto; }
+    .cb-studio {
+      margin: 56px 0 0;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+      color: var(--bone-soft);
+      opacity: 0.6;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .cb-hero-inner {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+        padding: 0 22px;
+      }
+      /* jet leads, copy follows — keeps the asymmetric, off-balance read on mobile */
+      .cb-jet {
+        order: -1;
+        margin: 0 -22px 8px auto;
+        width: min(78%, 360px);
+      }
+      .cb-statement-grid { grid-template-columns: 1fr; gap: 18px; }
+      .cb-side-label { display: inline-block; }
+      .cb-sub, .cb-para, .cb-close-sub { max-width: 100%; }
+    }
+  </style>
+</BaseLayout>
