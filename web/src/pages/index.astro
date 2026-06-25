@@ -72,11 +72,15 @@ const grouped = PORTFOLIO_GROUPS.map((g) => ({
           <p class="group-label">{group.label}</p>
           <div class="card-grid">
             {group.brands.map((brand) => (
-              <a class="card" href={brand.url} target="_blank" rel="noopener">
+              <a
+                class="card"
+                href={brand.url}
+                {...(brand.internal ? {} : { target: '_blank', rel: 'noopener' })}
+              >
                 <span class="badge">{brand.initials}</span>
                 <h3>{brand.name}</h3>
                 <p>{brand.blurb}</p>
-                <span class="visit">Visit site</span>
+                <span class="visit">{brand.cta ?? 'Visit site'}</span>
               </a>
             ))}
           </div>

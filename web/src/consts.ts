@@ -111,6 +111,16 @@ export const PORTFOLIO = [
       'Watch discovery and an honest advisor for iOS \u2014 find your next affordable premium watch under $1,000.',
     initials: 'UD',
   },
+  {
+    name: 'Cabin',
+    url: '/cabin',
+    group: 'Consumer apps',
+    blurb:
+      'Private jet charter for iOS \u2014 it learns how you like to fly, then points you to the few charters worth your time.',
+    initials: 'CB',
+    internal: true,
+    cta: 'Coming soon',
+  },
 ];
 
 export const PORTFOLIO_GROUPS = ['Financial information', 'Consumer apps'];
