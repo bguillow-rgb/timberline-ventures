@@ -4,9 +4,9 @@
 export const SITE = {
   name: 'Timberline Ventures LLC',
   shortName: 'Timberline Ventures',
-  tagline: 'A studio building useful digital products',
+  tagline: 'A studio building apps that learn your taste',
   description:
-    'Timberline Ventures LLC is an independent digital product studio. We build and operate a portfolio of consumer apps and high-trust information sites \u2014 from bilingual ITIN financial guides to native iOS collector apps.',
+    'Timberline Ventures LLC is an independent digital product studio. We build a family of iOS apps that learn what you like and get sharper the more you use them, plus bilingual financial guides for ITIN holders.',
   url: 'https://timberlineventuresllc.com',
   locale: 'en-US',
   contactEmail: 'hello@timberlineventuresllc.com',
@@ -52,7 +52,7 @@ export const PORTFOLIO = [
     url: 'https://itinlending.net',
     group: 'Financial information',
     blurb:
-      'Plain-English, bilingual guides to loans, mortgages, auto and business financing for ITIN holders in the U.S.',
+      'Plain-English, bilingual guides to loans, mortgages, and auto and business financing for ITIN holders in the U.S.',
     initials: 'IL',
   },
   {
@@ -60,7 +60,7 @@ export const PORTFOLIO = [
     url: 'https://itincreditcard.com',
     group: 'Financial information',
     blurb:
-      'How ITIN holders qualify for, choose and build credit with credit cards \u2014 without a Social Security number.',
+      'How ITIN holders qualify for a credit card and build credit with it, no Social Security number required.',
     initials: 'IC',
   },
   {
@@ -68,7 +68,7 @@ export const PORTFOLIO = [
     url: 'https://itincreditscore.com',
     group: 'Financial information',
     blurb:
-      'Building, checking and improving a U.S. credit score on an ITIN, explained step by step in English and Spanish.',
+      'Building, checking, and improving a U.S. credit score on an ITIN, explained step by step in English and Spanish.',
     initials: 'IS',
   },
   {
@@ -76,48 +76,54 @@ export const PORTFOLIO = [
     url: 'https://apps.apple.com/us/app/pour-picks/id6764040132',
     group: 'Consumer apps',
     blurb:
-      'A native iOS cellar for bourbon and whiskey collectors \u2014 catalog bottles, track value, and journal every pour.',
+      'A bourbon and whiskey cellar for iOS. Catalog your bottles, track what they\u2019re worth, and journal every pour.',
     initials: 'PP',
+    icon: '/assets/icons/pourpicks.png',
   },
   {
     name: 'Stick Picks',
     url: 'https://stickpicks.app',
     group: 'Consumer apps',
     blurb:
-      'The cigar collector\u2019s journal for iOS \u2014 manage your humidor, track collection value and rate every stick.',
+      'A cigar journal for iOS. Manage your humidor, keep an eye on collection value, and rate every stick you smoke.',
     initials: 'SP',
+    icon: '/assets/icons/stickpicks.png',
   },
   {
     name: 'Perfume Picks',
     url: 'https://perfumepicks.app',
     group: 'Consumer apps',
     blurb:
-      'A fragrance wardrobe for iOS \u2014 organize your collection, log wears and discover what to reach for next.',
+      'A fragrance wardrobe for iOS. Organize your bottles, log your wears, and figure out what to reach for next.',
     initials: 'FP',
+    icon: '/assets/icons/perfumepicks.png',
   },
   {
     name: 'Percolate',
     url: 'https://percolateapp.com',
     group: 'Consumer apps',
     blurb:
-      'A specialty-coffee shelf for iOS \u2014 build your coffee shelf, log structured cupping notes, and find your next bag.',
+      'A specialty-coffee shelf for iOS. Track your bags, log cupping notes, and find the next roast worth buying.',
     initials: 'PC',
+    icon: '/assets/icons/percolate.png',
   },
   {
     name: 'Underdial',
     url: 'https://underdial.com',
     group: 'Consumer apps',
     blurb:
-      'Watch discovery and an honest advisor for iOS \u2014 find your next affordable premium watch under $1,000.',
+      'A watch advisor for iOS that gives a straight answer. Find your next solid watch under $1,000.',
     initials: 'UD',
+    icon: '/assets/icons/underdial.png',
   },
   {
     name: 'Cabin',
     url: '/cabin',
     group: 'Consumer apps',
     blurb:
-      'Private jet charter for iOS \u2014 it learns how you like to fly, then points you to the few charters worth your time.',
+      'Private jet charter for iOS. It learns how you like to fly, then points you to the few charters worth your time.',
     initials: 'CB',
+    icon: '/assets/icons/cabin.svg',
     internal: true,
     cta: 'Coming soon',
   },

@@ -4,8 +4,8 @@ import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import { SITE } from '../consts';
 ---
 <BaseLayout
-  title="Layer — Skincare Routine App"
-  description="Layer is an upcoming iOS app for skincare—organize your shelf, build your AM/PM routine, track what works, and discover your next product. A Timberline Ventures product, coming soon."
+  title="Layer · Skincare Routine App"
+  description="Layer is an iOS app for skincare, coming soon. Organize your shelf, build your AM and PM routine, track what works, and figure out what to add next. Built by Timberline Ventures."
   path="/layer"
 >
   <slot name="head" slot="head">
@@ -15,9 +15,9 @@ import { SITE } from '../consts';
   <section class="hero">
     <div class="wrap">
       <span class="eyebrow">Coming Soon · Consumer Apps</span>
-      <h1>Layer — your <em>skincare</em> shelf</h1>
+      <h1>Your <em>skincare</em> shelf</h1>
       <p class="hero-sub">
-        A native iOS app for skincare: organize the products on your shelf, build and layer your AM/PM routine, track what is actually working for your skin, and discover what to add next. Built and operated by Timberline Ventures LLC.
+        A native iOS app for skincare. Organize the products on your shelf, build and layer your AM and PM routine, track what is actually working for your skin, and get a read on what to add next. Built and run by Timberline Ventures LLC.
       </p>
       <div class="cta-row">
         <a href="/contact" class="btn btn-primary">Get in touch</a>
@@ -29,14 +29,14 @@ import { SITE } from '../consts';
   <section class="screens">
     <div class="wrap">
       <h2 class="screens-title">A first look</h2>
-      <p class="screens-sub">Browse a curated catalog, then check any product against your shelf before you buy.</p>
+      <p class="screens-sub">Browse the catalog, then check any product against your shelf before you buy.</p>
       <div class="screens-grid">
         <figure class="phone">
-          <img src="/assets/layer-browse.webp" width="377" height="820" alt="Layer app — browse a catalog of skincare products by category, with brand and ingredient details." loading="lazy" decoding="async" />
+          <img src="/assets/layer-browse.webp" width="377" height="820" alt="Layer app: browse skincare products by category, with brand and ingredient details." loading="lazy" decoding="async" />
           <figcaption>Browse by category</figcaption>
         </figure>
         <figure class="phone">
-          <img src="/assets/layer-product.webp" width="377" height="820" alt="Layer app — a skincare product page showing step, key ingredients, targets, skin type, strength and finish." loading="lazy" decoding="async" />
+          <img src="/assets/layer-product.webp" width="377" height="820" alt="Layer app: a skincare product page showing step, key ingredients, targets, skin type, strength and finish." loading="lazy" decoding="async" />
           <figcaption>Know every ingredient</figcaption>
         </figure>
       </div>
@@ -45,13 +45,13 @@ import { SITE } from '../consts';
 
   <div class="prose">
     <h2>What Layer is</h2>
-    <p>Layer helps people make sense of their skincare. Catalog the products you own, build a step-by-step routine that respects correct layering order, log how your skin responds over time, and get a clear picture of what to keep, cut, or try next—then link out to buy the products you want.</p>
+    <p>Layer helps you make sense of your skincare. Catalog what you own, build a routine that layers in the right order, log how your skin actually responds, and get a clear read on what to keep, cut, or try next. When you are ready to buy, it links you out. Like the rest of our apps, it learns your skin over time, so the suggestions get sharper the longer you use it.</p>
 
     <h2>For partners &amp; advertisers</h2>
-    <p>Layer reaches an engaged audience of skincare buyers—people actively researching and purchasing cleansers, serums, moisturizers, SPF, and tools. For beauty and skincare brands interested in partnering or affiliate placement, reach the studio at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
+    <p>Layer reaches people who are actively buying skincare: cleansers, serums, moisturizers, SPF, and tools. If you are a beauty or skincare brand and want to talk about partnering or affiliate placement, email the studio at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
 
     <h2>Launching soon</h2>
-    <p>Layer is in active development. Check back for the launch, or <a href="/contact">contact us</a> to be notified when it goes live.</p>
+    <p>Layer is in active development. Check back for the launch, or <a href="/contact">contact us</a> and we will let you know when it goes live.</p>
   </div>
 
   <style>

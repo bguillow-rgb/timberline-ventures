@@ -12,7 +12,7 @@ const grouped = PORTFOLIO_GROUPS.map((g) => ({
 ---
 <BaseLayout
   title="About"
-  description={`About Timberline Ventures LLC \u2014 an independent digital product studio founded by ${SITE.founder.name} building iOS apps and ITIN financial information sites.`}
+  description={`About Timberline Ventures LLC, an independent studio founded by ${SITE.founder.name}. We build iOS apps that learn your taste, plus bilingual financial guides for ITIN holders.`}
   path="/about"
 >
   <slot name="head" slot="head">
@@ -24,25 +24,33 @@ const grouped = PORTFOLIO_GROUPS.map((g) => ({
   <div class="page-hero">
     <div class="wrap">
       <h1>About Timberline Ventures</h1>
-      <p>An independent digital product studio building useful, trustworthy products for underserved audiences.</p>
+      <p>An independent studio building iOS apps that learn your taste, and honest financial guides for people the big sites skip over.</p>
     </div>
   </div>
 
   <div class="prose">
     <h2>What we do</h2>
     <p>
-      Timberline Ventures LLC is a bootstrapped studio that designs, builds, and operates a small portfolio of digital products\u2014native iOS collector apps and bilingual ITIN financial information sites. We focus on niches where good, honest information and well-crafted software are genuinely scarce.
+      Timberline Ventures LLC is a bootstrapped studio. We design and run a small set of products: native iOS apps for people who collect and care about things, and bilingual financial guides for ITIN holders. We go after niches where good software and honest information are both hard to find.
     </p>
     <p>
-      Every property we operate is built for a specific audience, maintained with editorial care, and monetized in ways that align with what users actually need\u2014never at their expense.
+      Every product we run is built for a specific audience and looked after with real care. When we make money, we do it in ways that line up with what the people using our products actually want, never at their expense.
+    </p>
+
+    <h2>One engine, many apps</h2>
+    <p>
+      What ties the apps together is a single taste engine. It learns what you like from how you use an app: the bottles you keep, the watches you save, the roasts you rate again. It does not just hand you a list. It works out the pattern behind your choices, so each suggestion is one step better than the last.
+    </p>
+    <p>
+      And what it learns travels. The taste Pour Picks picks up on gives Percolate a head start, and gives Cabin a feel for how you like to fly before you ask. That shared memory is the whole point of building these under one roof instead of as six unrelated apps.
     </p>
 
     <h2>The studio</h2>
     <p>
-      Founded by <strong>{SITE.founder.name}</strong> in {SITE.foundedYear}, Timberline Ventures is intentionally small. We move carefully, publish when things are ready, and take the long view on both search authority and product quality. No investors, no shortcuts.
+      <strong>{SITE.founder.name}</strong> started Timberline Ventures in {SITE.foundedYear}. We keep it small on purpose. We move carefully, ship when things are ready, and take the long view on both product quality and search. No investors, no shortcuts.
     </p>
     <p>
-      We are headquartered in the United States and operate fully remotely.
+      We are based in the United States and work fully remotely.
     </p>
 
     <h2>Our portfolio</h2>
@@ -53,8 +61,8 @@ const grouped = PORTFOLIO_GROUPS.map((g) => ({
         <ul>
           {group.brands.map((brand) => (
             <li>
-              <strong><a href={brand.url} target="_blank" rel="noopener">{brand.name}</a></strong>
-              {' \u2014 '}{brand.blurb}
+              <strong><a href={brand.url} {...(brand.internal ? {} : { target: '_blank', rel: 'noopener' })}>{brand.name}</a></strong>
+              {': '}{brand.blurb}
             </li>
           ))}
         </ul>
@@ -63,12 +71,12 @@ const grouped = PORTFOLIO_GROUPS.map((g) => ({
 
     <h2>Editorial independence</h2>
     <p>
-      The ITIN information sites are <strong>independent publishers</strong>\u2014not lenders, mortgage brokers, financial advisors, or credit repair companies. Where we recommend third-party products, we disclose affiliate relationships clearly on each page. Our editorial positions are not for sale.
+      The ITIN sites are <strong>independent publishers</strong>. We are not a lender, a mortgage broker, a financial advisor, or a credit repair company. When we point to a third-party product, we say so and disclose the affiliate relationship right on the page. Our editorial calls are not for sale.
     </p>
 
     <h2>Contact</h2>
     <p>
-      For business inquiries, partnership proposals, or press contact, email us at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+      For business, partnerships, or press, email us at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
     </p>
   </div>
 </BaseLayout>

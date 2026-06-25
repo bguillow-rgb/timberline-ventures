@@ -24,8 +24,8 @@ const {
 const canonical = `${SITE.url}${path}`;
 const fullTitle =
   title === SITE.name || title === SITE.shortName
-    ? `${SITE.shortName} \u2014 ${SITE.tagline}`
-    : `${title} \u2014 ${SITE.shortName}`;
+    ? `${SITE.shortName} \u00b7 ${SITE.tagline}`
+    : `${title} \u00b7 ${SITE.shortName}`;
 const year = new Date().getFullYear();
 ---
 <!doctype html>
@@ -51,6 +51,13 @@ const year = new Date().getFullYear();
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content={SITE.theme.bg} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap"
+    />
 
     {!suppressGlobalSchema && <OrganizationSchema />}
     {!suppressGlobalSchema && <WebSiteSchema />}

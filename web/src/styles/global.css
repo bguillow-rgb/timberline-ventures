@@ -3,17 +3,19 @@
    type, full-bleed hero. Zero JS, system-font stack for instant LCP. */
 
 :root {
-  --bg: #0B1410;
-  --bg-alt: #0F1C15;
-  --card: #13231B;
+  --bg: #081109;
+  --bg-alt: #0E1A13;
+  --card: #12211A;
   --text: #ECE7D8;
   --muted: #9AA59B;
-  --accent: #CBA35A;
-  --accent-soft: #E4C988;
-  --border: #26352B;
+  --accent: #D4A574;
+  --accent-soft: #E8CC97;
+  --teal: #2F564E;
+  --teal-soft: #6FA396;
+  --border: #233329;
   --maxw: 1120px;
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
 }
 
 * { box-sizing: border-box; }
@@ -208,19 +210,29 @@ section { padding: 92px 0; }
   width: 46px; height: 46px;
   display: grid; place-items: center;
   border-radius: 11px;
-  background: rgba(203, 163, 90, 0.12);
-  border: 1px solid rgba(203, 163, 90, 0.4);
+  background: rgba(212, 165, 116, 0.12);
+  border: 1px solid rgba(212, 165, 116, 0.4);
   color: var(--accent);
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.5px;
   margin-bottom: 18px;
 }
+.card .app-icon {
+  width: 56px; height: 56px;
+  border-radius: 13px;
+  margin-bottom: 18px;
+  display: block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
 .card h3 {
-  font-size: 20px;
-  font-weight: 700;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
   color: var(--text);
   margin: 0 0 10px;
+  letter-spacing: -0.2px;
 }
 .card p { color: var(--muted); font-size: 15px; margin: 0 0 20px; flex: 1; }
 .card .visit {
@@ -328,9 +340,74 @@ section { padding: 92px 0; }
 .site-footer .f-links a:hover { color: var(--accent); }
 .site-footer .f-legal { color: var(--muted); font-size: 13px; width: 100%; margin-top: 8px; }
 
+/* ---------- DNA / taste engine section ---------- */
+.dna {
+  background:
+    radial-gradient(900px 380px at 78% 18%, rgba(111, 163, 150, 0.10), transparent 70%),
+    var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.dna .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+.dna .kicker {
+  font-size: 12px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--teal-soft); margin: 0 0 16px;
+}
+.dna h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.4px;
+  color: var(--text);
+  margin: 0 0 20px;
+}
+.dna h2 em { font-style: italic; color: var(--accent); }
+.dna .lede { font-size: 19px; color: var(--text); opacity: 0.94; margin: 0 0 18px; }
+.dna p { color: var(--muted); margin: 0 0 16px; }
+.dna p:last-child { margin-bottom: 0; }
+.dna .dna-note {
+  font-size: 14px;
+  color: var(--teal-soft);
+  letter-spacing: 0.3px;
+  border-left: 2px solid var(--teal);
+  padding-left: 16px;
+}
+
+/* Taste-graph diagram */
+.dna-graph {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dna-graph .node {
+  fill: var(--card);
+  stroke: rgba(212, 165, 116, 0.45);
+  stroke-width: 1.4;
+}
+.dna-graph .core {
+  fill: rgba(47, 86, 78, 0.55);
+  stroke: var(--teal-soft);
+  stroke-width: 1.6;
+}
+.dna-graph .link {
+  stroke: rgba(111, 163, 150, 0.45);
+  stroke-width: 1.2;
+  fill: none;
+}
+.dna-graph .glyph { fill: var(--accent); font-family: var(--sans); font-size: 13px; font-weight: 700; }
+.dna-graph .core-label { fill: var(--bone, #ECE6D7); font-family: var(--serif); font-size: 15px; font-weight: 600; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .card-grid, .value-grid { grid-template-columns: repeat(2, 1fr); }
+  .dna .wrap { grid-template-columns: 1fr; }
+  .dna-graph { max-width: 460px; margin: 8px auto 0; }
 }
 @media (max-width: 640px) {
   .main-nav { gap: 16px; }

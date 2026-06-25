@@ -5,7 +5,7 @@ import { SITE } from '../consts';
 ---
 <BaseLayout
   title="Contact"
-  description={`Get in touch with Timberline Ventures LLC\u2014business inquiries, partnerships, press, or product support.`}
+  description={`Get in touch with Timberline Ventures LLC. Business, partnerships, press, or help with one of the apps.`}
   path="/contact"
 >
   <slot name="head" slot="head">
@@ -15,7 +15,7 @@ import { SITE } from '../consts';
   <div class="page-hero">
     <div class="wrap">
       <h1>Get in touch</h1>
-      <p>Business inquiries, partnership proposals, press contact, or product questions\u2014we respond to every message.</p>
+      <p>Business, partnerships, press, or a question about one of the apps. We read every message.</p>
     </div>
   </div>
 
@@ -23,22 +23,22 @@ import { SITE } from '../consts';
     <div class="contact-card" style="margin-bottom: 48px;">
       <p style="color: var(--muted); margin-bottom: 8px;">Studio email</p>
       <a class="email" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
-      <p style="color: var(--muted); font-size: 15px; margin: 0;">We aim to respond within one business day.</p>
+      <p style="color: var(--muted); font-size: 15px; margin: 0;">We try to reply within one business day.</p>
     </div>
 
     <h2>What to include</h2>
-    <p>A line or two about who you are and what you're looking for is always helpful. We get a lot of generic outreach so anything specific helps us respond faster and more usefully.</p>
+    <p>A line or two about who you are and what you want goes a long way. We get a lot of generic outreach, so anything specific helps us write back faster and actually be useful.</p>
 
-    <h2>Product support</h2>
-    <p>For support on a specific product, please contact that product directly:</p>
+    <h2>App support</h2>
+    <p>For help with a specific app, reach the app directly:</p>
     <ul>
-      <li><strong>Pour Picks, Stick Picks, Perfume Picks (iOS apps)</strong> \u2014 use the support link inside the app or contact the relevant app's support page.</li>
-      <li><strong>ITIN sites</strong> \u2014 each site has a contact page; use that for site-specific questions.</li>
+      <li><strong>Pour Picks, Stick Picks, Perfume Picks, Percolate, Underdial</strong>: use the support link inside the app, or its support page.</li>
+      <li><strong>ITIN sites</strong>: each site has its own contact page for site-specific questions.</li>
     </ul>
 
     <h2>Press &amp; media</h2>
     <p>
-      For press inquiries, interview requests, or media kit access, email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> with "Press" in the subject line.
+      For press, interview requests, or a media kit, email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> with "Press" in the subject line.
     </p>
   </div>
 </BaseLayout>
