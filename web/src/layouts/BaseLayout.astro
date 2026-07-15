@@ -38,6 +38,11 @@ const year = new Date().getFullYear();
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
 
+    {/* FlexOffers publisher site-ownership verification. FlexOffers looks for this
+        on the HOME PAGE head. Removing it un-verifies the site and the affiliate
+        account has to re-verify, so leave it in place. */}
+    <meta name="fo-verify" content="da553f61-138e-4af2-a50f-1e25e9482c68" />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
