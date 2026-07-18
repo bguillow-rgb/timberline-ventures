@@ -6,39 +6,53 @@
 Timberline Ventures LLC (timberlineventuresllc.com) is an independent digital
 product studio that builds and operates:
 
-1. Three bilingual (English/Spanish) ITIN financial information sites for
+1. A family of native iOS apps that learn a user's taste within each app.
+2. Three bilingual (English/Spanish) financial information sites for
    ITIN holders and foreign nationals in the United States.
-2. Three native iOS collector and lifestyle apps.
 
 Publisher: Timberline Ventures LLC
 Founded: 2023
 Principal: Bob Guillow (Founder)
 Contact: hello@timberlineventuresllc.com
+LinkedIn: https://www.linkedin.com/company/timberlineventuresllc
 Independence: No outside investors. Not a lender, broker, or financial advisor.
+
+## Portfolio — iOS apps (live)
+
+- Pour Picks (App Store): bourbon and whiskey cellar app. Catalog bottles,
+  track value, journal pours.
+- Perfume Picks (perfumepicks.app): fragrance wardrobe app. Organize a
+  collection, log wears, discover next picks.
+- Stick Picks (stickpicks.app): cigar collection journal. Manage a humidor,
+  track collection value, rate cigars.
+- Percolate (percolateapp.com): specialty coffee shelf. Track bags, log
+  cupping notes, find the next roast worth buying.
+- Underdial (underdial.com): watch advisor for finding a solid watch
+  under $1,000.
+
+## Portfolio — iOS apps (in development)
+
+- Cabin (/cabin): private jet charter app that learns how you like to fly.
+- Layer (/layer): skincare shelf and routine app.
+- Right of Way (/right-of-way): interactive driving judgment practice for
+  new drivers, built on a deterministic rules engine.
+- Game Night (/game-night): board game picker and game night planner.
 
 ## Portfolio — Financial information sites
 
-- ITIN Lending (itinlending.net): Guides on ITIN loans, mortgages, auto
-  financing, credit cards, personal and business loans for ITIN holders.
-- ITIN Credit Card (itincreditcard.com): How ITIN holders qualify for, choose,
+- ITIN Lending (itinlending.net): guides on ITIN loans, mortgages, auto
+  financing, and business loans for ITIN holders.
+- ITIN Credit Card (itincreditcard.com): how ITIN holders qualify for, choose,
   and build credit with credit cards without an SSN.
-- ITIN Credit Score (itincreditscore.com): Building, checking, and improving a
+- ITIN Credit Score (itincreditscore.com): building, checking, and improving a
   U.S. credit score on an ITIN, in English and Spanish.
-
-## Portfolio — iOS apps
-
-- Pour Picks (pourpicks.app): Native iOS cellar app for bourbon and whiskey
-  collectors — catalog bottles, track value, journal pours.
-- Stick Picks (stickpicks.app): Native iOS cigar collection journal — manage a
-  humidor, track collection value, rate cigars.
-- Perfume Picks (perfumepicks.app): Native iOS fragrance wardrobe — organize a
-  collection, log wears, discover next picks.
 
 ## Site pages
 
 - / — Corporate homepage, portfolio overview, studio values, FAQ
 - /about — Studio background, founder, editorial independence statement
 - /contact — Business inquiries, press contact
+- /cabin, /layer, /right-of-way, /game-night — In-development app pages
 - /privacy — Privacy policy (this site only)
 - /terms — Terms of use
 

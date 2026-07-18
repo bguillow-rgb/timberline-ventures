@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+---
+<BaseLayout
+  title="Game Night · Board Game Picker App"
+  description="Game Night is an iOS app in development at Timberline Ventures. It helps a host pick the right board game for tonight and gets the whole table's plan in one place."
+  path="/game-night"
+>
+  <slot name="head" slot="head">
+    <BreadcrumbSchema crumbs={[{ name: 'Game Night', path: '/game-night' }]} />
+  </slot>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">In Development · Consumer Apps</span>
+      <h1>What are we playing?</h1>
+      <p>Game Night helps a host answer the question that eats the first half hour of every game night. Your shelf, your people, one good choice.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h2>What it is</h2>
+    <p>You own forty games and the same three hit the table every time. Game Night looks at your shelf, who is coming, how much time you have, and what the group is in the mood for, then suggests the game that fits tonight. It also keeps the plan itself in one place, so nobody is scrolling a group chat at 7:55 asking what the address is.</p>
+
+    <h2>Guests play free</h2>
+    <p>Anyone you invite joins the app without paying. They can say what they are up for and see the plan before they arrive. Hosting the occasional night is free too.</p>
+
+    <h2>Where it stands</h2>
+    <p>Game Night is being built now. If you want to hear when it ships, <a href="/contact">contact us</a> and we will put you on the list.</p>
+  </div>
+</BaseLayout>

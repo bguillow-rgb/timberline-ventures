@@ -21,7 +21,7 @@ const schema = {
   email: SITE.contactEmail,
   foundingDate: SITE.foundedYear,
   description: SITE.description,
-  sameAs: SITE.founder.sameAs.filter(Boolean),
+  sameAs: SITE.sameAs.filter(Boolean),
   founder: {
     '@type': 'Person',
     name: SITE.founder.name,

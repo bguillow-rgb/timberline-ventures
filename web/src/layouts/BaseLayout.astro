@@ -93,7 +93,9 @@ const year = new Date().getFullYear();
       <div class="wrap">
         <span class="f-brand">{SITE.name}</span>
         <div class="f-links">
-          {FOOTER_LINKS.map((item) => <a href={item.href}>{item.label}</a>)}
+          {FOOTER_LINKS.map((item) => (
+            <a href={item.href} {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}>{item.label}</a>
+          ))}
         </div>
         <p class="f-legal">&copy; {year} {SITE.name}. An independent digital product studio. All rights reserved.</p>
       </div>

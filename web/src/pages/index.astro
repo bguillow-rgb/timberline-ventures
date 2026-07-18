@@ -5,8 +5,8 @@ import { SITE, PORTFOLIO, PORTFOLIO_GROUPS } from '../consts';
 
 const faqs = [
   { q: 'What is Timberline Ventures LLC?', a: 'Timberline Ventures LLC is an independent digital product studio. We build a family of consumer iOS apps that learn what you like, and we publish three bilingual financial guidance sites for ITIN holders in the U.S.' },
-  { q: 'What do you mean by a taste engine?', a: 'Every Timberline app shares one engine that learns your taste from how you use it. The whiskey you keep, the watches you save, the coffee you rate. It does not just list options. It learns the pattern behind your choices, and what it learns in one app carries into the next.' },
-  { q: 'What apps does Timberline Ventures publish?', a: 'Pour Picks for bourbon and whiskey, Stick Picks for cigars, Perfume Picks for fragrance, Percolate for specialty coffee, and Underdial for watches. Cabin, for private jet charter, is on the way. All are native iOS apps.' },
+  { q: 'What do you mean by a taste engine?', a: 'Every Timberline app runs on the same engine, one that learns your taste from how you use it: which bottles you keep, which watches you save. It works out the pattern behind your choices instead of handing you a list, and each app keeps what it learns to itself.' },
+  { q: 'What apps does Timberline Ventures publish?', a: 'Pour Picks for bourbon and whiskey, Stick Picks for cigars, Perfume Picks for fragrance, Percolate for specialty coffee, and Underdial for watches. Four more are in the works: Cabin for private jet charter, Layer for skincare, Right of Way for new drivers, and Game Night for board games. All are native iOS apps.' },
   { q: 'Who operates the ITIN information sites?', a: 'itinlending.net, itincreditcard.com, and itincreditscore.com are owned and operated by Timberline Ventures LLC. They publish independent, bilingual guides for ITIN holders. Timberline is not a lender or a broker.' },
   { q: 'Is Timberline Ventures a lender or financial advisor?', a: 'No. The ITIN sites are independent publishers, not lenders, brokers, or financial advisors. Everything on them is for information only.' },
   { q: 'How can I reach you?', a: `Email the studio at ${SITE.contactEmail}. For help with a specific app, use the support link inside that app.` },
@@ -49,8 +49,8 @@ const groups = {
         <div class="label">Apps live, with more coming</div>
       </div>
       <div class="stat">
-        <div class="num">1</div>
-        <div class="label">Taste engine behind all of them</div>
+        <div class="num">9</div>
+        <div class="label">Apps in the family, one engine</div>
       </div>
       <div class="stat">
         <div class="num">EN&nbsp;+&nbsp;ES</div>
@@ -64,38 +64,44 @@ const groups = {
     <div class="wrap">
       <div class="dna-copy">
         <p class="kicker">The engine underneath</p>
-        <h2>It does not just suggest. It <em>learns you</em>.</h2>
+        <h2>Built to <em>learn you</em></h2>
         <p class="lede">
-          Most apps hand you a list and hope something sticks. Ours watch what you actually keep, rate, and reach for, then work out the pattern behind it.
+          Most apps hand you a list and hope something sticks. Ours watch what you actually keep and reach for, then work out the pattern behind it.
         </p>
         <p>
-          The bottles you cellar, the watches you save, the roasts you rate again. Each choice teaches the engine a little more about your taste, so the next recommendation is one level better than a list. It is closer to a friend who already knows what you go for.
+          The bottles you cellar, the watches you save, the roasts you rate again. Each choice teaches the engine a little more about your taste, so the next suggestion lands closer than the last. After a while it feels less like a catalog and more like a friend who already knows what you go for.
         </p>
         <p class="dna-note">
-          And it travels. What Pour Picks learns about you gives Percolate a head start, and Cabin a sense of how you like to fly before you ask. One taste, read across the whole family.
+          Each app keeps its own read on you. What Pour Picks learns about your whiskey stays in Pour Picks; the coffee app starts from zero and earns its own picture. Your taste data stays inside the app you gave it to.
         </p>
       </div>
       <div class="dna-diagram" aria-hidden="true">
         <svg class="dna-graph" viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
           <!-- links -->
-          <path class="link" d="M210 180 L90 70" />
-          <path class="link" d="M210 180 L330 70" />
-          <path class="link" d="M210 180 L52 180" />
-          <path class="link" d="M210 180 L368 180" />
-          <path class="link" d="M210 180 L90 290" />
-          <path class="link" d="M210 180 L330 290" />
+          <path class="link" d="M210 180 L210 45" />
+          <path class="link" d="M210 180 L297 77" />
+          <path class="link" d="M210 180 L343 157" />
+          <path class="link" d="M210 180 L327 248" />
+          <path class="link" d="M210 180 L256 307" />
+          <path class="link" d="M210 180 L164 307" />
+          <path class="link" d="M210 180 L93 248" />
+          <path class="link" d="M210 180 L77 157" />
+          <path class="link" d="M210 180 L123 77" />
           <!-- core -->
           <circle class="core" cx="210" cy="180" r="46" />
-          <text class="core-label" x="210" y="176" text-anchor="middle">your</text>
-          <text class="core-label" x="210" y="194" text-anchor="middle">taste</text>
+          <text class="core-label" x="210" y="176" text-anchor="middle">taste</text>
+          <text class="core-label" x="210" y="194" text-anchor="middle">engine</text>
           <!-- nodes -->
           <g>
-            <circle class="node" cx="90" cy="70" r="26" /><text class="glyph" x="90" y="75" text-anchor="middle">PP</text>
-            <circle class="node" cx="330" cy="70" r="26" /><text class="glyph" x="330" y="75" text-anchor="middle">SP</text>
-            <circle class="node" cx="52" cy="180" r="26" /><text class="glyph" x="52" y="185" text-anchor="middle">FP</text>
-            <circle class="node" cx="368" cy="180" r="26" /><text class="glyph" x="368" y="185" text-anchor="middle">PC</text>
-            <circle class="node" cx="90" cy="290" r="26" /><text class="glyph" x="90" y="295" text-anchor="middle">UD</text>
-            <circle class="node" cx="330" cy="290" r="26" /><text class="glyph" x="330" y="295" text-anchor="middle">CB</text>
+            <circle class="node" cx="210" cy="45" r="26" /><text class="glyph" x="210" y="50" text-anchor="middle">PP</text>
+            <circle class="node" cx="297" cy="77" r="26" /><text class="glyph" x="297" y="82" text-anchor="middle">SP</text>
+            <circle class="node" cx="343" cy="157" r="26" /><text class="glyph" x="343" y="162" text-anchor="middle">FP</text>
+            <circle class="node" cx="327" cy="248" r="26" /><text class="glyph" x="327" y="253" text-anchor="middle">PC</text>
+            <circle class="node" cx="256" cy="307" r="26" /><text class="glyph" x="256" y="312" text-anchor="middle">UD</text>
+            <circle class="node" cx="164" cy="307" r="26" /><text class="glyph" x="164" y="312" text-anchor="middle">CB</text>
+            <circle class="node" cx="93" cy="248" r="26" /><text class="glyph" x="93" y="253" text-anchor="middle">LY</text>
+            <circle class="node" cx="77" cy="157" r="26" /><text class="glyph" x="77" y="162" text-anchor="middle">RW</text>
+            <circle class="node" cx="123" cy="77" r="26" /><text class="glyph" x="123" y="82" text-anchor="middle">GN</text>
           </g>
         </svg>
       </div>
@@ -107,8 +113,8 @@ const groups = {
     <div class="wrap">
       <div class="section-head">
         <p class="kicker">The apps</p>
-        <h2>Six collections, one taste</h2>
-        <p>Each app is built for people who care about one thing and want to go deep on it. Same engine, different shelf.</p>
+        <h2>What&#39;s live and what&#39;s coming</h2>
+        <p>Each app is built for people who care about one thing and want to go deep on it. Same engine, different shelf. The ones marked coming soon are on the bench right now.</p>
       </div>
       <div class="card-grid">
         {groups.apps.map((brand) => (
@@ -165,7 +171,7 @@ const groups = {
         </div>
         <div class="value">
           <h3><span class="ico">&#9670;</span>Trust comes first</h3>
-          <p>Our finance sites deal with people's money, so accuracy is not optional. Real sources, clear disclosure, and both languages from day one. The apps follow the same rule: your taste data is yours.</p>
+          <p>Our finance sites deal with people's money, so accuracy is not optional. Real sources and clear disclosure, in both languages from day one. The apps follow the same rule: your taste data is yours.</p>
         </div>
         <div class="value">
           <h3><span class="ico">&#9679;</span>No investors, no agenda</h3>

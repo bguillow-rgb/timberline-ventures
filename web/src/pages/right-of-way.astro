@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+---
+<BaseLayout
+  title="Right of Way · Driving Practice App"
+  description="Right of Way is an iOS app in development at Timberline Ventures. Animated traffic scenes that teach new drivers who goes first, and why, before the road test."
+  path="/right-of-way"
+>
+  <slot name="head" slot="head">
+    <BreadcrumbSchema crumbs={[{ name: 'Right of Way', path: '/right-of-way' }]} />
+  </slot>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">In Development · Consumer Apps</span>
+      <h1>Who goes first?</h1>
+      <p>Right of Way is an interactive driving app for new drivers. Watch a traffic scene play out, make the call, then see what the rule actually says.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h2>What it is</h2>
+    <p>Permit-test apps quiz you on signs and fines. The part that actually scares parents is judgment: four cars at a stop sign, a pedestrian stepping off the curb, a merge that is closing fast. Right of Way puts you inside animated scenes like those and asks you to make the call before anything moves. Get it wrong and you watch how it would have gone, then see the rule that decides it.</p>
+
+    <h2>Built to be right</h2>
+    <p>Every answer comes from a hand-checked rules engine written against state driver handbooks. Same scene, same answer, every time. An app that teaches a sixteen-year-old the wrong right-of-way rule is worse than no app at all, so we made this part boring on purpose.</p>
+
+    <h2>Where it stands</h2>
+    <p>Right of Way is in early development, with a playable prototype in testing. If you run a driving school, or you have a teen heading for the road test, <a href="/contact">contact us</a> and we will let you know when there is something to try.</p>
+  </div>
+</BaseLayout>

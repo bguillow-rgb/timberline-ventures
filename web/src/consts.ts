@@ -11,15 +11,17 @@ export const SITE = {
   locale: 'en-US',
   contactEmail: 'hello@timberlineventuresllc.com',
   foundedYear: '2023',
+  // Company-level profiles. Feeds Organization schema sameAs + the footer.
+  sameAs: ['https://www.linkedin.com/company/timberlineventuresllc'],
+  linkedin: 'https://www.linkedin.com/company/timberlineventuresllc',
   // Founder / principal \u2014 used for Person and Organization schema. The
   // /about page is the canonical entity anchor for the whole portfolio.
   founder: {
     name: 'Bob Guillow',
     role: 'Founder & Principal',
     sameAs: [
-      // Add LinkedIn / X / GitHub when ready. Empty entries are filtered out
-      // before rendering so it\u2019s safe to leave them blank.
-      // 'https://www.linkedin.com/in/...',
+      // Personal profiles (LinkedIn /in/, X, GitHub) when ready. Empty entries
+      // are filtered out before rendering so it\u2019s safe to leave them blank.
     ],
   },
   // Analytics + tracking. All values come from env vars at build time so
@@ -76,7 +78,7 @@ export const PORTFOLIO = [
     url: 'https://apps.apple.com/us/app/pour-picks/id6764040132',
     group: 'Consumer apps',
     blurb:
-      'A bourbon and whiskey cellar for iOS. Catalog your bottles, track what they\u2019re worth, and journal every pour.',
+      "A bourbon and whiskey cellar for iOS. Catalog your bottles and what they're worth, with a journal for every pour.",
     initials: 'PP',
     icon: '/assets/icons/pourpicks.png',
   },
@@ -85,7 +87,7 @@ export const PORTFOLIO = [
     url: 'https://stickpicks.app',
     group: 'Consumer apps',
     blurb:
-      'A cigar journal for iOS. Manage your humidor, keep an eye on collection value, and rate every stick you smoke.',
+      'A cigar journal for iOS. Run your humidor and rate every stick you smoke.',
     initials: 'SP',
     icon: '/assets/icons/stickpicks.png',
   },
@@ -94,7 +96,7 @@ export const PORTFOLIO = [
     url: 'https://perfumepicks.app',
     group: 'Consumer apps',
     blurb:
-      'A fragrance wardrobe for iOS. Organize your bottles, log your wears, and figure out what to reach for next.',
+      'A fragrance wardrobe for iOS. Log your wears and figure out what to reach for next.',
     initials: 'FP',
     icon: '/assets/icons/perfumepicks.png',
   },
@@ -103,7 +105,7 @@ export const PORTFOLIO = [
     url: 'https://percolateapp.com',
     group: 'Consumer apps',
     blurb:
-      'A specialty-coffee shelf for iOS. Track your bags, log cupping notes, and find the next roast worth buying.',
+      'A specialty-coffee shelf for iOS that tracks your bags and points you at the next roast worth buying.',
     initials: 'PC',
     icon: '/assets/icons/percolate.png',
   },
@@ -114,7 +116,7 @@ export const PORTFOLIO = [
     blurb:
       'A watch advisor for iOS that gives a straight answer. Find your next solid watch under $1,000.',
     initials: 'UD',
-    icon: '/assets/icons/underdial.png',
+    icon: '/assets/icons/underdial.svg',
   },
   {
     name: 'Cabin',
@@ -126,6 +128,37 @@ export const PORTFOLIO = [
     icon: '/assets/icons/cabin.svg',
     internal: true,
     cta: 'Coming soon',
+  },
+  {
+    name: 'Layer',
+    url: '/layer',
+    group: 'Consumer apps',
+    blurb:
+      'A skincare shelf for iOS. Get your AM and PM routine in the right order and see what your skin actually responds to.',
+    initials: 'LY',
+    internal: true,
+    cta: 'Coming soon',
+  },
+  {
+    name: 'Right of Way',
+    url: '/right-of-way',
+    group: 'Consumer apps',
+    blurb:
+      'Driving judgment practice for new drivers. Animated traffic scenes ask who goes first, then show you why the rule works that way.',
+    initials: 'RW',
+    icon: '/assets/icons/rightofway.png',
+    internal: true,
+    cta: 'In development',
+  },
+  {
+    name: 'Game Night',
+    url: '/game-night',
+    group: 'Consumer apps',
+    blurb:
+      "Picks the right board game for tonight, from your shelf and the people coming over, and keeps the whole plan in one place.",
+    initials: 'GN',
+    internal: true,
+    cta: 'In development',
   },
 ];
 
@@ -141,6 +174,7 @@ export const NAV = [
 export const FOOTER_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/timberlineventuresllc', external: true },
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },
 ];
