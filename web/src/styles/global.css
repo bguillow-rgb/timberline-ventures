@@ -85,10 +85,45 @@ a:hover { color: var(--accent-soft); }
   position: relative;
   padding: 132px 0 120px;
   background:
-    linear-gradient(180deg, rgba(11,20,16,0.55) 0%, rgba(11,20,16,0.86) 55%, var(--bg) 100%),
+    linear-gradient(100deg, rgba(9,15,12,0.88) 0%, rgba(9,15,12,0.62) 46%, rgba(9,15,12,0.30) 100%),
+    linear-gradient(180deg, rgba(11,20,16,0.35) 0%, rgba(11,20,16,0.55) 60%, var(--bg) 100%),
     url('/assets/hero-forest.jpg') center / cover no-repeat;
   border-bottom: 1px solid var(--border);
-  text-align: center;
+  text-align: left;
+}
+.hero-wordmark {
+  font-family: var(--serif);
+  font-size: clamp(46px, 7vw, 84px);
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  margin: 0 0 26px;
+}
+.hero-tagline {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.6vw, 30px);
+  color: var(--text);
+  margin: 0 0 22px;
+}
+.hero-tagline em { font-style: italic; font-weight: 400; }
+.hero-dash {
+  display: inline-block;
+  width: 56px;
+  height: 1px;
+  background: var(--accent);
+  flex: none;
+}
+.hero-kicker {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 44px;
 }
 .eyebrow {
   display: inline-block;
@@ -102,25 +137,8 @@ a:hover { color: var(--accent-soft); }
   padding: 6px 16px;
   margin-bottom: 26px;
 }
-.hero h1 {
-  font-family: var(--serif);
-  font-size: clamp(40px, 6.2vw, 72px);
-  line-height: 1.05;
-  font-weight: 700;
-  margin: 0 auto 22px;
-  max-width: 14ch;
-  letter-spacing: -0.5px;
-  color: var(--text);
-}
-.hero h1 em { color: var(--accent); font-style: normal; }
-.hero-sub {
-  font-size: clamp(18px, 2.2vw, 21px);
-  color: var(--text);
-  max-width: 620px;
-  margin: 0 auto 36px;
-  opacity: 0.92;
-}
 .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero .cta-row { justify-content: flex-start; }
 .btn {
   display: inline-block;
   padding: 13px 26px;
@@ -414,6 +432,9 @@ section { padding: 92px 0; }
   .main-nav a { font-size: 14px; }
   .logo span { display: none; }
   .hero { padding: 96px 0 84px; }
+  .hero-tagline { gap: 12px; }
+  .hero-dash { width: 34px; }
+  .hero-kicker { letter-spacing: 2.6px; font-size: 12px; }
   .stats .wrap { grid-template-columns: 1fr; gap: 28px; }
   .card-grid, .value-grid { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
