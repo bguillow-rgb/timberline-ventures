@@ -1,0 +1,70 @@
+---
+// App-level Terms of Use for the Layer iOS app. This is the URL submitted to
+// App Store Connect and linked from the in-app paywall. It MIRRORS
+// app/legal/terms.tsx in the Layer repo — keep the two in sync.
+// Apple requires the exact phrase "Terms of Use" (never "Terms of Service")
+// at the point of purchase; keep the title consistent.
+// Distinct from /terms, which covers this corporate site only.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import { SITE } from '../../consts';
+
+const effective = '2026-08-02';
+---
+<BaseLayout
+  title="Layer App Terms of Use"
+  description="Terms of Use for Layer: Skincare Advisor, the iOS app by Timberline Ventures LLC."
+  path="/layer/terms"
+>
+  <slot name="head" slot="head">
+    <BreadcrumbSchema crumbs={[
+      { name: 'Layer', path: '/layer' },
+      { name: 'Terms of Use', path: '/layer/terms' },
+    ]} />
+  </slot>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>Layer Terms of Use</h1>
+      <p>The rules and conditions for using the Layer: Skincare Advisor iOS app.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p class="effective">Last updated: {effective}</p>
+
+    <p>Layer is made by Timberline Ventures LLC. By using the app you agree to these terms.</p>
+
+    <h2>Not medical advice</h2>
+    <p>
+      Layer offers general information about skincare products and common ingredient interactions. It is not medical advice, and it is no substitute for a dermatologist or doctor. Ingredient guidance is based on published research about ingredients in general, not on your skin. Patch test new products, and talk to a professional about anything involving a prescription, a skin condition, or pregnancy.
+    </p>
+
+    <h2>Subscriptions</h2>
+    <p>
+      Layer Plus is an optional auto-renewing subscription billed through your Apple account. It renews at the listed price until you cancel, which you can do anytime in your Apple account settings under Subscriptions. Cancelling stops the next renewal; it does not refund the current period. Prices are shown in the app before you buy.
+    </p>
+
+    <h2>Shopping links and commissions</h2>
+    <p>
+      Buy links in Layer go to third-party retailers. Layer may earn a commission on purchases made through those links, at no extra cost to you. The retailer, not Layer, is responsible for the products they sell, their prices, shipping, and returns. Commissions never change which products the advisor recommends.
+    </p>
+
+    <h2>Acceptable use</h2>
+    <p>
+      Use the app lawfully and don&rsquo;t attempt to disrupt it, reverse engineer it, or misrepresent its output as professional advice to others.
+    </p>
+
+    <h2>No warranty</h2>
+    <p>
+      The app and its recommendations are provided as-is. Product data comes from public sources and retailer feeds and can be incomplete or out of date. To the extent the law allows, Timberline Ventures LLC is not liable for decisions made based on the app&rsquo;s output.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      We may update these terms as the app evolves. Material changes will be reflected on this page with a new date at the top. Questions? Use the feedback option in the app&rsquo;s Profile tab, or email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+    </p>
+
+    <p>See also the <a href="/layer/privacy">Layer Privacy Policy</a>.</p>
+  </div>
+</BaseLayout>
