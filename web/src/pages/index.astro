@@ -73,35 +73,15 @@ const groups = {
           Each app keeps its own read on you. What Pour Picks learns about your whiskey stays in Pour Picks; the coffee app starts from zero and earns its own picture. Your taste data stays inside the app you gave it to.
         </p>
       </div>
-      <div class="dna-diagram" aria-hidden="true">
-        <svg class="dna-graph" viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
-          <!-- links -->
-          <path class="link" d="M210 180 L210 45" />
-          <path class="link" d="M210 180 L297 77" />
-          <path class="link" d="M210 180 L343 157" />
-          <path class="link" d="M210 180 L327 248" />
-          <path class="link" d="M210 180 L256 307" />
-          <path class="link" d="M210 180 L164 307" />
-          <path class="link" d="M210 180 L93 248" />
-          <path class="link" d="M210 180 L77 157" />
-          <path class="link" d="M210 180 L123 77" />
-          <!-- core -->
-          <circle class="core" cx="210" cy="180" r="46" />
-          <text class="core-label" x="210" y="176" text-anchor="middle">taste</text>
-          <text class="core-label" x="210" y="194" text-anchor="middle">engine</text>
-          <!-- nodes -->
-          <g>
-            <circle class="node" cx="210" cy="45" r="26" /><text class="glyph" x="210" y="50" text-anchor="middle">PP</text>
-            <circle class="node" cx="297" cy="77" r="26" /><text class="glyph" x="297" y="82" text-anchor="middle">SP</text>
-            <circle class="node" cx="343" cy="157" r="26" /><text class="glyph" x="343" y="162" text-anchor="middle">FP</text>
-            <circle class="node" cx="327" cy="248" r="26" /><text class="glyph" x="327" y="253" text-anchor="middle">PC</text>
-            <circle class="node" cx="256" cy="307" r="26" /><text class="glyph" x="256" y="312" text-anchor="middle">UD</text>
-            <circle class="node" cx="164" cy="307" r="26" /><text class="glyph" x="164" y="312" text-anchor="middle">CB</text>
-            <circle class="node" cx="93" cy="248" r="26" /><text class="glyph" x="93" y="253" text-anchor="middle">LY</text>
-            <circle class="node" cx="77" cy="157" r="26" /><text class="glyph" x="77" y="162" text-anchor="middle">RW</text>
-            <circle class="node" cx="123" cy="77" r="26" /><text class="glyph" x="123" y="82" text-anchor="middle">GN</text>
-          </g>
-        </svg>
+      <div class="dna-diagram">
+        <img
+          class="dna-graph"
+          src="/assets/hub-spoke.svg"
+          alt="Hub and spoke diagram: at the center, the people we build for; around them, each Timberline app and site as its own spoke, with the shared engine, app factory, growth, and reporting layer in between."
+          width="1280"
+          height="1010"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
