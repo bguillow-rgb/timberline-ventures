@@ -21,12 +21,13 @@ Independence: No outside investors. Not a lender, broker, or financial advisor.
 
 - Pour Picks (App Store): bourbon and whiskey cellar app. Catalog bottles,
   track value, journal pours.
-- Perfume Picks (perfumepicks.app): fragrance wardrobe app. Organize a
-  collection, log wears, discover next picks.
+- Perfume Picks (App Store, perfumepicks.app): fragrance wardrobe app.
+  Organize a collection, log wears, discover next picks.
 - Stick Picks (stickpicks.app): cigar collection journal. Manage a humidor,
   track collection value, rate cigars.
-- Percolate (percolateapp.com): specialty coffee shelf. Track bags, log
-  cupping notes, find the next roast worth buying.
+- Percolate (App Store, percolateapp.com): specialty coffee shelf. Track
+  bags, log cupping notes, find the next roast worth buying. Live on the
+  App Store as of July 2026.
 - Underdial (underdial.com): watch advisor for finding a solid watch
   under $1,000.
 

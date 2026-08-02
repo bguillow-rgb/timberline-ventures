@@ -81,6 +81,7 @@ export const PORTFOLIO = [
       "A bourbon and whiskey cellar for iOS. Catalog your bottles and what they're worth, with a journal for every pour.",
     initials: 'PP',
     icon: '/assets/icons/pourpicks.png',
+    cta: 'On the App Store',
   },
   {
     name: 'Stick Picks',
@@ -99,6 +100,7 @@ export const PORTFOLIO = [
       'A fragrance wardrobe for iOS. Log your wears and figure out what to reach for next.',
     initials: 'FP',
     icon: '/assets/icons/perfumepicks.png',
+    cta: 'On the App Store',
   },
   {
     name: 'Percolate',
@@ -108,6 +110,7 @@ export const PORTFOLIO = [
       'A specialty-coffee shelf for iOS that tracks your bags and points you at the next roast worth buying.',
     initials: 'PC',
     icon: '/assets/icons/percolate.png',
+    cta: 'On the App Store',
   },
   {
     name: 'Underdial',
