@@ -1,30 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1010" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" role="img" aria-label="Timberline hub and spoke model: the hub is two audiences, enthusiasts and strivers; every property is a spoke">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1010" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" role="img" aria-label="Timberline hub and spoke model: the hub is two audiences, enthusiasts and strivers; every property is a spoke plugged into one shared ring of services">
 <text x="640" y="52" fill="#E4C988" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="5">ENTHUSIASTS</text>
 <text x="640" y="78" fill="#9AA59B" font-size="14.5" text-anchor="middle">deep in one passion</text>
 <text x="640" y="958" fill="#E4C988" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="5">STRIVERS</text>
 <text x="640" y="984" fill="#9AA59B" font-size="14.5" text-anchor="middle">working toward the next milestone, from U.S. credit to a driver&#8217;s license</text>
-<line x1="438" y1="530" x2="312" y2="545" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
-<line x1="450" y1="430" x2="333" y2="384" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
-<line x1="509" y1="349" x2="428" y2="252" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
-<line x1="599" y1="305" x2="574" y2="182" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
-<line x1="700" y1="310" x2="736" y2="189" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
-<line x1="786" y1="362" x2="875" y2="274" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
-<line x1="836" y1="449" x2="957" y2="414" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
-<line x1="839" y1="549" x2="962" y2="576" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
-<line x1="498" y1="652" x2="411" y2="742" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
-<line x1="587" y1="702" x2="555" y2="824" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
-<line x1="689" y1="703" x2="720" y2="825" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
-<line x1="779" y1="654" x2="865" y2="746" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
-<circle cx="640" cy="505" r="196" fill="none" stroke="#26352B" stroke-width="34" opacity="0.55"/>
+<line x1="429" y1="531" x2="312" y2="545" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
+<line x1="442" y1="427" x2="333" y2="384" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
+<line x1="503" y1="342" x2="428" y2="252" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
+<line x1="598" y1="296" x2="574" y2="182" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
+<line x1="702" y1="301" x2="736" y2="189" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
+<line x1="792" y1="356" x2="875" y2="274" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
+<line x1="845" y1="446" x2="957" y2="414" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
+<line x1="848" y1="551" x2="962" y2="576" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
+<line x1="492" y1="658" x2="411" y2="742" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
+<line x1="585" y1="711" x2="555" y2="824" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
+<line x1="692" y1="712" x2="720" y2="825" stroke="#CBA35A" stroke-width="2" opacity="0.9"/>
+<line x1="785" y1="661" x2="865" y2="746" stroke="#26352B" stroke-width="1.5" opacity="0.45" stroke-dasharray="5 6"/>
+<circle cx="640" cy="505" r="196" fill="none" stroke="#26352B" stroke-width="34" opacity="0.65"/>
 <circle cx="640" cy="505" r="196" fill="none" stroke="#CBA35A" stroke-width="1" opacity="0.35" stroke-dasharray="3 7"/>
-<rect x="713" y="351" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
-<text x="779" y="371" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">DNA engine</text>
-<rect x="435" y="351" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
-<text x="501" y="371" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">App factory</text>
-<rect x="435" y="629" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
-<text x="501" y="649" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">Growth machine</text>
-<rect x="713" y="629" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
-<text x="779" y="649" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">Reporting spine</text>
+<circle cx="429" cy="531" r="4.5" fill="#CBA35A" stroke="#0B1410" stroke-width="1.5" opacity="1"/>
+<circle cx="442" cy="427" r="4.5" fill="#CBA35A" stroke="#0B1410" stroke-width="1.5" opacity="1"/>
+<circle cx="503" cy="342" r="4.5" fill="#CBA35A" stroke="#0B1410" stroke-width="1.5" opacity="1"/>
+<circle cx="598" cy="296" r="4.5" fill="#26352B" stroke="#0B1410" stroke-width="1.5" opacity="0.9"/>
+<circle cx="702" cy="301" r="4.5" fill="#26352B" stroke="#0B1410" stroke-width="1.5" opacity="0.9"/>
+<circle cx="792" cy="356" r="4.5" fill="#26352B" stroke="#0B1410" stroke-width="1.5" opacity="0.9"/>
+<circle cx="845" cy="446" r="4.5" fill="#26352B" stroke="#0B1410" stroke-width="1.5" opacity="0.9"/>
+<circle cx="848" cy="551" r="4.5" fill="#26352B" stroke="#0B1410" stroke-width="1.5" opacity="0.9"/>
+<circle cx="492" cy="658" r="4.5" fill="#CBA35A" stroke="#0B1410" stroke-width="1.5" opacity="1"/>
+<circle cx="585" cy="711" r="4.5" fill="#CBA35A" stroke="#0B1410" stroke-width="1.5" opacity="1"/>
+<circle cx="692" cy="712" r="4.5" fill="#CBA35A" stroke="#0B1410" stroke-width="1.5" opacity="1"/>
+<circle cx="785" cy="661" r="4.5" fill="#26352B" stroke="#0B1410" stroke-width="1.5" opacity="0.9"/>
+<rect x="744" y="392" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
+<text x="810" y="412" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">DNA engine</text>
+<rect x="415" y="375" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
+<text x="481" y="395" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">App factory</text>
+<rect x="399" y="577" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
+<text x="465" y="597" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">Growth machine</text>
+<rect x="744" y="588" width="132" height="30" rx="15" fill="#13231B" stroke="#26352B"/>
+<text x="810" y="608" fill="#ECE7D8" font-size="14.5" font-weight="600" text-anchor="middle">Reporting spine</text>
 <circle cx="640" cy="505" r="118" fill="#13231B" stroke="#CBA35A" stroke-width="2.5"/>
 <text x="640" y="465" fill="#CBA35A" font-size="13.5" font-weight="700" text-anchor="middle" letter-spacing="3">THE HUB</text>
 <text x="640" y="494" fill="#ECE7D8" font-size="22" font-weight="700" text-anchor="middle" font-family="Iowan Old Style, Palatino, Georgia, serif">Enthusiasts</text>
@@ -73,4 +85,5 @@
 <text x="90" y="951" fill="#9AA59B" font-size="13.5">live today</text>
 <line x1="70" y1="972" x2="84" y2="972" stroke="#26352B" stroke-width="1.5" stroke-dasharray="5 6"/>
 <text x="90" y="977" fill="#9AA59B" font-size="13.5">in development</text>
+<text x="1216" y="951" fill="#9AA59B" font-size="13" text-anchor="end">Every spoke plugs into one shared ring; no property owns a lane.</text>
 </svg>
