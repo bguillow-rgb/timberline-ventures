@@ -14,8 +14,14 @@
   --teal-soft: #6FA396;
   --border: #233329;
   --maxw: 1120px;
-  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  /* Typefaces are a choice, not a default. The old stack was the bare system
+     font (-apple-system/Segoe UI/Roboto) under Fraunces: a characterful serif
+     over an undesigned body face, which is the single most common signature of
+     a generated site. Instrument Sans has real letterforms and is not Inter;
+     Newsreader is a variable text serif with optical sizing, so the wordmark
+     and body set from one family at two optical sizes. */
+  --sans: 'Instrument Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
 }
 
 * { box-sizing: border-box; }
@@ -117,24 +123,24 @@ a:hover { color: var(--accent-soft); }
   background: var(--accent);
   flex: none;
 }
+/* Sentence case, normal tracking. ALL-CAPS at 3-4px letter-spacing is the
+   template "eyebrow" that sits above every hero and section heading on a
+   generated page; five of them were doing it here. */
 .hero-kicker {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
   color: var(--muted);
   margin: 0 0 44px;
 }
 .eyebrow {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
   color: var(--accent);
-  border: 1px solid rgba(203, 163, 90, 0.5);
-  border-radius: 999px;
-  padding: 6px 16px;
+  border-bottom: 1px solid rgba(203, 163, 90, 0.45);
+  padding: 0 0 4px;
   margin-bottom: 26px;
 }
 .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
@@ -180,8 +186,8 @@ a:hover { color: var(--accent-soft); }
 section { padding: 92px 0; }
 .section-head { max-width: 640px; margin: 0 auto 52px; text-align: center; }
 .section-head .kicker {
-  font-size: 12px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
+  font-size: 14px; font-weight: 500; letter-spacing: 0;
+  color: var(--accent); margin: 0 0 14px;
 }
 .section-head h2 {
   font-family: var(--serif);
@@ -195,11 +201,11 @@ section { padding: 92px 0; }
 
 /* ---------- Portfolio ---------- */
 .group-label {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--text);
   margin: 0 0 22px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -374,8 +380,8 @@ section { padding: 92px 0; }
 .dna .dna-copy { max-width: 760px; }
 .dna .dna-diagram { max-width: 1000px; margin: 0 auto; width: 100%; }
 .dna .kicker {
-  font-size: 12px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--teal-soft); margin: 0 0 16px;
+  font-size: 14px; font-weight: 500; letter-spacing: 0;
+  color: var(--teal-soft); margin: 0 0 16px;
 }
 .dna h2 {
   font-family: var(--serif);
